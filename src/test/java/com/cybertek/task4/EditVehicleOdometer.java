@@ -26,6 +26,7 @@ public class EditVehicleOdometer {
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
     }
 
+
     @Test
     public void EditVehicleOdometer() throws InterruptedException {
 //       5. Truck driver navigate "Fleet" module and click "Vehicle Odometers" sub module
