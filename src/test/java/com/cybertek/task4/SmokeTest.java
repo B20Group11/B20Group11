@@ -111,22 +111,24 @@ public class SmokeTest {
        // driver.findElement(By.id("prependedInput")).sendKeys("user161");
        // Thread.sleep(1000);
        // driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.className("unclickable")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.linkText("Vehicle Odometer")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@title='Grid Settings']")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//input[contains(@id,'column-c155')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//span[@class='close']")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//a[@title='Reset']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.id("user-menu")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+       // driver.findElement(By.id("user-menu")).click();
+       // Thread.sleep(1000);
     }
+
+
 
 
     @AfterMethod
