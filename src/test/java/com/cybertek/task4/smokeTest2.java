@@ -41,6 +41,7 @@ public class smokeTest2 {
         driver.findElement(By.id("user-menu")).click();
         Thread.sleep(1000);
     }
+
     @AfterMethod
     public void tearDownMethod() throws InterruptedException {
         driver.findElement(By.linkText("Logout")).click();
