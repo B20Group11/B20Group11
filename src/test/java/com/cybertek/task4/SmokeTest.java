@@ -108,9 +108,9 @@ public class SmokeTest {
     //AC#4. Verify that truck driver should be able to reset grid by click on grid setting.(Ziiadin)
     public void reset_grid_by_click_on_grid_setting() throws InterruptedException {
         //    driver.manage().deleteAllCookies();
-        driver.findElement(By.id("prependedInput")).sendKeys("user161");
-        Thread.sleep(1000);
-        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
+       // driver.findElement(By.id("prependedInput")).sendKeys("user161");
+       // Thread.sleep(1000);
+       // driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
         Thread.sleep(1000);
         driver.findElement(By.className("unclickable")).click();
         Thread.sleep(1000);
@@ -127,7 +127,6 @@ public class SmokeTest {
         driver.findElement(By.id("user-menu")).click();
         Thread.sleep(1000);
     }
-
 
 
     @AfterMethod
