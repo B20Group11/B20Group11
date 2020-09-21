@@ -22,6 +22,7 @@ public class SmokeTest {
         driver.findElement(By.id("prependedInput")).sendKeys("user161");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
 
+
     }
 
 
