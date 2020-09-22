@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class smokeTest1 {
+public class smokeTest1_Radoje {
 
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();

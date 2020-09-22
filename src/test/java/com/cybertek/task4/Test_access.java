@@ -1,6 +1,6 @@
 package com.cybertek.task4;
 
-public class Test {
+public class Test_access {
     public static void main(String[] args) {
         System.out.println("Hello");
 
