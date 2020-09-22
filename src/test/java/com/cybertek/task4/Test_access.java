@@ -10,6 +10,8 @@ public class Test_access {
 
         System.out.println("Meerim");
 
+        System.out.println("tekin");
+
 
 
 
