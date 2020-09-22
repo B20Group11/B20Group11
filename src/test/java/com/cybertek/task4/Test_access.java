@@ -10,7 +10,7 @@ public class Test_access {
 
         System.out.println("Meerim");
 
-        System.out.println("tekin");
+        System.out.println("tekin");// Hi from Alex
 
 
 
