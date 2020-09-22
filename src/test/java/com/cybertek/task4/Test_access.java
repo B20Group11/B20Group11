@@ -12,6 +12,8 @@ public class Test_access {
 
         System.out.println("tekin");// Hi from Alex
 
+        System.out.println("Muhtar");
+
 
 
 
