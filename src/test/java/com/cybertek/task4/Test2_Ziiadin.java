@@ -7,7 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
-public class smokeTest2_Ziiadin {
+public class Test2_Ziiadin {
     WebDriver driver;
     @BeforeMethod
     public void setUpMethod() throws InterruptedException {
