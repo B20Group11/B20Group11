@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class Bitrix {
 
+    public static String baseURL = "https://login2.nextbasecrm.com/";
 
     public static void helpdesk(WebDriver driver){
 

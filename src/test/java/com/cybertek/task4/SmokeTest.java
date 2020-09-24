@@ -23,10 +23,8 @@ public class SmokeTest {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.get("https://qa2.vytrack.com/user/login");
+        driver.get(VyTrack.baseURL);
         VyTrack.user(driver);
-      //  driver.findElement(By.id("prependedInput")).sendKeys("user161");
-      //  driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
     }
 
     @Test
