@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class smokeTest0_Alex {
+public class Test0_Alex {
     WebDriver driver;
 
     @BeforeMethod

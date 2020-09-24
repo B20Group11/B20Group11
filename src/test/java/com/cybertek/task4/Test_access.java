@@ -13,6 +13,10 @@ public class Test_access {
         System.out.println("tekin");// Hi from Alex
         System.out.println("Hello");
 
+        System.out.println("Muhtar");// Hi from Alex
+
+        System.out.println("Ziiadin is here"); // Hi from Alex
+
 
 
 

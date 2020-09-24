@@ -1,5 +1,6 @@
 package com.cybertek.task4;
 
+import com.cybertek.Credentials.VyTrack;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -23,8 +24,9 @@ public class SmokeTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://qa2.vytrack.com/user/login");
-        driver.findElement(By.id("prependedInput")).sendKeys("user161");
-        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
+        VyTrack.user(driver);
+      //  driver.findElement(By.id("prependedInput")).sendKeys("user161");
+      //  driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
     }
 
     @Test
@@ -105,7 +107,7 @@ public class SmokeTest {
     @Test
     //AC#4. Verify that truck driver should be able to reset grid by click on grid setting.(Ziiadin)
     public void reset_grid_by_click_on_grid_setting() throws InterruptedException {
-       //    driver.manage().deleteAllCookies();
+       // driver.manage().deleteAllCookies();
        // driver.findElement(By.id("prependedInput")).sendKeys("user161");
        // Thread.sleep(1000);
        // driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
@@ -134,6 +136,4 @@ public class SmokeTest {
         Thread.sleep(1000);
         driver.close();
     }
-
-
 }
