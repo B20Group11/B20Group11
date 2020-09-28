@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SmokeTest {
+public class SmokeTest_VyTrack {
 
     WebDriver driver;
 
