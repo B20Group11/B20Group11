@@ -19,9 +19,9 @@ public class BrowserUtils {
         return webElementsAsString;
     }
 
-        public static void wait(double seconds) {
+        public static void wait(int seconds) {
         try {
-            Thread.sleep((long) seconds * 1000);
+            Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
