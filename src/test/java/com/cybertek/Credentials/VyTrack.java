@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 
 public class VyTrack {
 
+    public static String baseURL = "https://qa2.vytrack.com/user/login";
+
     public static void user(WebDriver driver){
 
         // Enter username: “user161”
