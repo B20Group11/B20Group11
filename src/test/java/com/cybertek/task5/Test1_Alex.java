@@ -39,7 +39,7 @@ public class Test1_Alex {
 
         BrowserUtils.wait(1);
         WebElement taskTitle = driver.findElement(By.xpath("//*[@data-bx-id='task-edit-title']"));
-        taskTitle.sendKeys(thingsToDo + Keys.ENTER);
+        taskTitle.sendKeys(thingsToDo+ Keys.ENTER);
 
         BrowserUtils.wait(1);
         WebElement checkbox1 = driver.findElement(By.xpath("//div[@class='task-info-panel-important']"));
