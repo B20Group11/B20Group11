@@ -4,7 +4,10 @@ import com.cybertek.Credentials.Bitrix;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.WebDriverFactory;
 import com.github.javafaker.Faker;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,18 +29,17 @@ public class Test1_Alex {
     @Test
     public void HighPriority_checkbox(){
         Bitrix.helpdesk(driver);
-
         BrowserUtils.wait(1);
         driver.findElement(By.className("menu-item-link")).click();
         BrowserUtils.wait(1);
         driver.findElement(By.id("feed-add-post-form-tab-tasks")).click();
 
         Faker faker = new Faker();
-        String thingsToDo = faker.book().title();//HI
+        String thingsToDo = faker.book().title();
 
         BrowserUtils.wait(1);
         WebElement taskTitle = driver.findElement(By.xpath("//*[@data-bx-id='task-edit-title']"));
-        taskTitle.sendKeys(thingsToDo+ Keys.ENTER);//HI
+        taskTitle.sendKeys(thingsToDo+ Keys.ENTER);
 
         BrowserUtils.wait(1);
         WebElement checkbox1 = driver.findElement(By.xpath("//div[@class='task-info-panel-important']"));
@@ -47,21 +49,10 @@ public class Test1_Alex {
         WebElement sendButton = driver.findElement(By.id("blog-submit-button-save"));
         sendButton.click();
 
-        WebElement popButton = driver.findElement(By.xpath("//*[@id=\"blogPostEditCreateTaskPopup\"]/div[2]/span"));
-        popButton.click();
-/*
-
-        BrowserUtils.wait(1);
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
-
-
         BrowserUtils.wait(1);
         WebElement taskNameLink= driver.findElement(By.xpath("//a[.='"+thingsToDo+"']"));
         taskNameLink.click();
 
-
-         */
         WebElement checkbox2 = driver.findElement(By.xpath("//*[@id=\"task-detail-important-button\"]"));
 
         System.out.println(checkbox2.getText());
