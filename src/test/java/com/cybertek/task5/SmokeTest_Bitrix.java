@@ -67,6 +67,40 @@ public class SmokeTest_Bitrix extends TestBase {
 
     }
 
+    @Test
+    //B211-118 AC# 2. User should be able to click on Visual Editor and see the editor text-bar displays on top of the message box. (Alex)
+    public void VisualEditor_isDisplayed(){
+        // Go to <https://login2.nextbasecrm.com/>
+        driver.get(Bitrix.baseURL);
+
+        //Enter valid username <helpdesk11@cybertekschool.com>
+        //Enter valid password <UserUser>
+        Bitrix.helpdesk(driver);
+
+        //User click on the <Activity Stream> module
+        BrowserUtils.wait(1);
+        driver.findElement(By.className("menu-item-link")).click();
+
+        //User clicks on <TASK> sub module
+        BrowserUtils.wait(1);
+        driver.findElement(By.id("feed-add-post-form-tab-tasks")).click();
+
+        //User click and see the editor text-bar displays on top of the message box.
+        BrowserUtils.wait(1);
+        WebElement visualEditor = driver.findElement(By.id("lhe_button_editor_task-form-lifefeed_task_form"));
+        WebElement toolBar = driver.findElement(By.id("bx-html-editor-tlbr-cnt-lifefeed_task_form"));
+        Assert.assertTrue(toolBar.isDisplayed(),"Tool Bar is NOT displayed. Verification FAILED!");
+
+        BrowserUtils.wait(1);
+        visualEditor.click();
+        Assert.assertFalse(toolBar.isDisplayed(),"Tool Bar is displayed. Verification FAILED!");
+
+        BrowserUtils.wait(1);
+        visualEditor.click();
+        Assert.assertTrue(toolBar.isDisplayed(),"Tool Bar is NOT displayed. Verification FAILED!");
+
+
+    }
 
 }
 
