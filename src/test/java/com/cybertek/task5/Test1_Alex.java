@@ -28,6 +28,7 @@ public class Test1_Alex {
 
     @Test
     public void HighPriority_checkbox(){
+        //driver.get(Bitrix.baseURL);
         Bitrix.helpdesk(driver);
 
         BrowserUtils.wait(1);
@@ -74,9 +75,13 @@ public class Test1_Alex {
         WebElement iframe = driver.findElement(By.className("side-panel-iframe"));
         driver.switchTo().frame(iframe);
 
+        WebElement checkHighPriority = driver.findElement(By.xpath("//span[@class='if-not-no']"));
+        Assert.assertTrue(checkHighPriority.isDisplayed(),"HighPriority is NOT selected. Verification FAILED!");
 
-        boolean selection = driver.findElement(By.xpath("//span[@class='if-no']")).isSelected();
-        System.out.println(selection);
+        //boolean selection = driver.findElement(By.xpath("//span[@class='if-not-no']")).isDisplayed();
+        //System.out.println(selection);
+
+
        // WebElement checkHighPriority = driver.findElement(By.xpath("//span[contains(@class, 'if-not-no')]"));
 
         //Assert.assertTrue(checkHighPriority.isSelected(),"Checkbox2 is NOT selected. Verification FAILED!");
