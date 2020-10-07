@@ -16,6 +16,7 @@ public class SmokeTest_Bitrix extends TestBase {
     //  @BeforeMethod and @AfterMethod extends on the TestBase class.!!!!!!
 
     @Test
+    //B211-118 AC# 1. User should be able to click on "High Priority" checkbox to set the current task to a top priority task. (Alex)
     public void HighPriority_checkbox(){
         // Go to <https://login2.nextbasecrm.com/>
         driver.get(Bitrix.baseURL);
