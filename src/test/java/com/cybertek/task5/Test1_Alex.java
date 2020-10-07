@@ -74,6 +74,9 @@ public class Test1_Alex {
         WebElement iframe = driver.findElement(By.className("side-panel-iframe"));
         driver.switchTo().frame(iframe);
 
+
+        boolean selection = driver.findElement(By.xpath("//span[@class='if-no']")).isSelected();
+        System.out.println(selection);
        // WebElement checkHighPriority = driver.findElement(By.xpath("//span[contains(@class, 'if-not-no')]"));
 
         //Assert.assertTrue(checkHighPriority.isSelected(),"Checkbox2 is NOT selected. Verification FAILED!");
@@ -82,7 +85,7 @@ public class Test1_Alex {
         //WebElement checkHighPriority = driver.findElement(By.id("task-detail-important-button"));
         //checkHighPriority.click();
 
-        WebElement checkHighPriority = driver.findElement(By.xpath("//div[@class='task-info-panel-important mutable']"));
+        //WebElement checkHighPriority = driver.findElement(By.xpath("//div[@class='task-info-panel-important mutable']"));
        // WebElement element = driver.findElement(By.id("task-detail-important-button"));
        // String text = element.getText();
        // System.out.println(text);
