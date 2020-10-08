@@ -53,5 +53,6 @@ public class MeerimBitrix {
 
         Thread.sleep(1000);
         driver.close();
+        //Hello
 }
 }
