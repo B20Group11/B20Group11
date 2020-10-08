@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     //#1- We created the properties object
     private static Properties properties = new Properties();
 
@@ -25,21 +22,10 @@ public class ConfigurationReader {
             System.out.println("Properties file not found.");
         }
     }
-<<<<<<< HEAD
-    //#4- We read from file: we will be creating a utility method for reading.
-=======
     //#4- We read from file: we will be creating a utility method for reading
 
->>>>>>> origin/master
     public static String getProperty(String keyWord){
         return properties.getProperty(keyWord);
     }
 
-<<<<<<< HEAD
-
 }
-
-
-=======
-}
->>>>>>> origin/master
