@@ -2,6 +2,7 @@ package com.cybertek.task4;
 
 import com.cybertek.Credentials.Bitrix;
 import com.cybertek.Credentials.VyTrack;
+import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -23,7 +24,7 @@ public class MeerimBitrix {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(" https://login2.nextbasecrm.com/stream/");
+       driver.get("https://login2.nextbasecrm.com/stream/");
         Bitrix.helpdesk(driver);
 
     }@Test
