@@ -177,6 +177,41 @@ public class SmokeTest_Bitrix extends TestBase {
         Assert.assertTrue(mail.isDisplayed());
     }
 
+    @Test
+    //B211-117 Automation AC#7. User should be able to click on Visual Editor and see the editor text-bar displays on top of the message box.(Nurtekin)
+    public void Visual_Editor() {
+        driver.get(Bitrix.baseURL);
+        Bitrix.helpdesk(driver);
+
+        BrowserUtils.wait(1);
+        driver.findElement(By.xpath("//span[@class='feed-add-post-form-link feed-add-post-form-link-active']")).click();
+        BrowserUtils.wait(1);
+        driver.findElement(By.xpath("//span[@id='lhe_button_editor_blogPostForm']")).click();
+        BrowserUtils.wait(1);
+        driver.findElement(By.xpath("//span[@id='lhe_button_editor_blogPostForm']")).click();
+        BrowserUtils.wait(1);
+
+        Assert.assertTrue(driver.findElement(By.id("bx-html-editor-tlbr-idPostFormLHE_blogPostForm")).isDisplayed());
+
+    }
+
+    @Test
+   //B211-117 Automation AC#8. User should be able to click on the Topic icon to see the Message Topic text box displays on top of the message box.(Nurtekin)
+    public void Topic_icon() {
+        driver.get(Bitrix.baseURL);
+        Bitrix.helpdesk(driver);
+
+        BrowserUtils.wait(3);
+        driver.findElement(By.xpath("//span[@class='feed-add-post-form-link feed-add-post-form-link-active']")).click();
+        BrowserUtils.wait(3);
+        driver.findElement(By.xpath("//*[@id=\"blog-title\"]")).click();
+        BrowserUtils.wait(3);
+
+        Assert.assertTrue(driver.findElement(By.id("POST_TITLE")).isDisplayed());
+
+
+    }
+
 
 }
 
