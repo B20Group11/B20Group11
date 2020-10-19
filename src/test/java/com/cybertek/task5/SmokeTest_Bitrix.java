@@ -102,6 +102,83 @@ public class SmokeTest_Bitrix extends TestBase {
 
     }
 
+    @Test
+    //B211-128 AC #4 Automation User should be able to insert videos by clicking on the video icon and entering the video URL.(Ziiadin)
+    public void activityStreamModule() {
+        driver.get(Bitrix.baseURL);
+
+        Bitrix.helpdesk(driver);
+        BrowserUtils.wait(1);
+
+        WebElement activityStreamBtn = driver.findElement(By.xpath("//a[@title='Activity Stream']"));
+        BrowserUtils.wait(1);
+        activityStreamBtn.click();
+        BrowserUtils.wait(1);
+
+        WebElement messageBtn = driver.findElement(By.xpath("//span[.='Message']/span"));
+        BrowserUtils.wait(1);
+        messageBtn.click();
+        BrowserUtils.wait(1);
+
+
+        WebElement insertVideo = driver.findElement(By.xpath("//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']"));
+        BrowserUtils.wait(1);
+        insertVideo.click();
+        BrowserUtils.wait(1);
+
+
+        WebElement videoSource = driver.findElement(By.xpath("//input[@id='video_idPostFormLHE_blogPostForm-source']"));
+        videoSource.sendKeys("https://www.youtube.com/watch?v=mhwmB95EX1A&list=RDmhwmB95EX1A&start_radio=1");
+        BrowserUtils.wait(50);
+
+        WebElement saveBtn = driver.findElement(By.xpath("//input[@id='undefined']"));
+        BrowserUtils.wait(1);
+        saveBtn.click();
+        BrowserUtils.wait(1);
+
+
+        WebElement sendMessageBtn = driver.findElement(By.xpath("//button[@id='blog-submit-button-save']"));
+        BrowserUtils.wait(10);
+        sendMessageBtn.click();
+        BrowserUtils.wait(1);
+
+    }
+
+    @Test
+    //B211-128 Automation AC#1 User should be able to click on upload files icon to upload files and pictures from local disks,
+    // download from external drive, select documents from bixtrix24, and create files to upload.(Meerim)
+    public void us1Ac1(){
+        driver.get(Bitrix.baseURL);
+        Bitrix.helpdesk(driver);
+
+        WebElement message=driver.findElement(By.xpath("//span[.='Message']"));
+        message.click();
+        WebElement uploadFiles=driver.findElement(By.xpath("//span[@id='bx-b-uploadfile-blogPostForm']"));
+        uploadFiles.click();
+        WebElement upload=driver.findElement(By.xpath("//td[@class='diskuf-selector wd-fa-add-file-light-cell wd-fa-add-file-from-main']"));
+        upload.click();
+        Assert.assertTrue(upload.isDisplayed());
+    }
+
+    @Test
+    //B211-117 Automation AC#2. User should be able to add users from selecting contact from E-mail user,
+    // Employees and Departments and Recent contact lists.(Meerim)
+    public void us1Ac2() throws InterruptedException {
+        driver.get(Bitrix.baseURL);
+        Bitrix.helpdesk(driver);
+
+        WebElement message=driver.findElement(By.xpath("//span[.='Message']"));
+        message.click();
+        WebElement AllEmployees=driver.findElement(By.xpath("//a[@id='bx-destination-tag']"));
+        AllEmployees.click();
+        WebElement mail=driver.findElement(By.xpath("//div[@class='bx-finder-box-item-t7-name']"));
+        mail.click();
+        mail.click();
+        Assert.assertTrue(mail.isDisplayed());
+    }
+
+
+
 
 
 }
