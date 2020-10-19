@@ -28,11 +28,11 @@ public class Test2_Tekin_US1_AC8 {
         //driver.get(Bitrix.baseURL);
         Bitrix.helpdesk(driver);
 
-        BrowserUtils.wait(2);
+        BrowserUtils.wait(3);
         driver.findElement(By.xpath("//span[@class='feed-add-post-form-link feed-add-post-form-link-active']")).click();
-        BrowserUtils.wait(2);
-        driver.findElement(By.xpath("//span[@class='feed-add-post-form-title-btn']")).click();
-        BrowserUtils.wait(10);
+        BrowserUtils.wait(3);
+        driver.findElement(By.xpath("//*[@id=\"blog-title\"]")).click();
+        BrowserUtils.wait(3);
 
        Assert.assertTrue(driver.findElement(By.id("POST_TITLE")).isDisplayed());
 

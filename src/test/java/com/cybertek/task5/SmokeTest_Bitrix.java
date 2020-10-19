@@ -178,9 +178,6 @@ public class SmokeTest_Bitrix extends TestBase {
     }
 
 
-
-
-
 }
 
 
