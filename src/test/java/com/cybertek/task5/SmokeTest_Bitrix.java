@@ -1,6 +1,5 @@
 package com.cybertek.task5;
 
-
 import com.cybertek.Credentials.Bitrix;
 import com.cybertek.base.TestBase;
 import com.cybertek.utilities.BrowserUtils;
@@ -211,7 +210,6 @@ public class SmokeTest_Bitrix extends TestBase {
 
 
     }
-
 
 }
 
